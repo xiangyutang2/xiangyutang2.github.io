@@ -11778,31 +11778,39 @@ div#notebook {
 <h1 style="text-align: center;">Machine Learning and Me</h1><p><img style="float: right;" src="head.jpg" width="100">
 My name is Xiangyu, and I am a machine learning enthusiast. I started studying machine learning since 2016, and started to seriously engage in this topic since 2018.</p>
 <p>Please visit my <a href="https://www.linkedin.com/in/xiangyu-tang-1a3b711b/">LinkedIn Page</a> for contact information.</p>
-<p>Here are some of the projects I have done.</p>
-<ol>
+<p>Here are some of the projects I have done. Please click on the links to go to detailed project pages.</p>
+<ul>
 <li><a href="https://xiangyutang2.github.io/image-captioning/">Image Captioning</a>: a project that uses RNN and CNN models to generate novel captions for an image.<ul>
 <li>Unlike traditional image captioning techinques, we use a model where the RNN and CNN are concatenated together to form a language model. The output of this language model is fed into another netword which generates the next word in the caption.</li>
+<li>Word Embedding: GloVe embedding is used for word representation</li>
+<li>Transfer Learning: VGG16 is used to generate high-level image features and is concatenated with RNN output</li>
+<li>Caption Generation: Beam Search is used to generate high probability outputs</li>
+<li>Metric: BLEU and ROUGE scores are used to measure performance</li>
 </ul>
 </li>
-</ol>
-<ol>
 <li><a href="https://xiangyutang2.github.io/auto-colorization-autoencoders/">Automatic Colorization</a>:  a project that uses CNN and autoencoders to colorize a gray-scale image.<ul>
 <li>We use an autoencoder to colorize a black-and-white phote. The novel aspect is that high level features of the image is extracted from a previously trained deep CNN and injected into the input of the decoder.</li>
+<li>Color Spaces: CIE LAB color space is chosen for its better approximation of human vision</li>
+<li>Transfer Learning: VGG16 is used to extract high level features which are concatenated with mid-level features extracted by the encoder</li>
+<li>Model Merging: VGG16 and encoder is merged before feeding into decoder</li>
 </ul>
 </li>
-</ol>
-<ol>
+<li><a href="https://xiangyutang2.github.io/tweet-classification/">Tweet Classification using BERT</a>: a project that uses the BERT word representation to identify useful tweets and sort them into different categories during a natural disaster or a mass casualty event.<ul>
+<li>Pytorch Model: Use bidirectional LSTM stack on top of a BERT representation to create the classification model</li>
+<li>Baseline: Model is compared with a bidirectional LSTM using GloVE Twitter embedding as input and a fine-tuned BERT sequence classification model</li>
+<li>Training: Model is trained with various "Patience" and learning rate decay schedules.</li>
+<li>Metric: Model is compared using Matthews Correlation Coefficient </li>
+</ul>
+</li>
 <li><a href="https://xiangyutang2.github.io/emotion-detection/">Emotion Detection</a>: a tutorial on using transfer learning to detect facial emotions in an image.<ul>
 <li>We illustrate the use of transfer learning to use previously trained CNN on new applications.</li>
 </ul>
 </li>
-</ol>
-<ol>
 <li><a href="https://xiangyutang2.github.io/feature-engineering/">Feature Engineering</a>: a tutorial introducing feature engineering and data exploration<ul>
 <li>We illustrate the most basic and the most important part of machine learning, data exploration and feature engineering.</li>
 </ul>
 </li>
-</ol>
+</ul>
 
 </div>
 </div>
